@@ -1,3 +1,9 @@
+//
+// Usage:
+// .L plot_SiPM_nonlin.C
+// plot_SiPM_nonlin();
+//
+
 #include "TH1.h"
 #include "TF1.h"
 #include "TCanvas.h"
@@ -13,19 +19,18 @@ vector<double> func_nonlin(vector<double> charge, unsigned int nTS1, unsigned in
 void plot_SiPM_nonlin(){
 
   //
-  // Check a few pulse shape from splash
+  // Check a few pulse shapes from splash
   // https://twiki.cern.ch/twiki/pub/CMS/HcalRunIICom/RAW_shape_table_v2.xls
   //
-
   //vector<double> charge = {84.3, 196.3, 44879.3, 1202483.1, 489679.8,
   //200274.2, 97868.4, 63336.2, 47260.8, 37734.7};
   vector<double> charge = {121.6, 140.3, 145499.0, 342367.1, 89533.0, 
 			   25732.4, 10456.2, 6600.0, 4449.5, 3436.8};
   unsigned int nTS1=2; // 0-9 convention, determine the TS range used for corrections
-  unsigned int nTS2=7; //
+  unsigned int nTS2=7; // last TS being included
   
   //
-  //
+  // Define vectors of charges (for charge_1,2,3 etc. See a few lines below for more info)
   //
   vector<double> charge1 = func_nonlin(charge,nTS1,nTS2,0,0.);
   vector<double> charge2 = func_nonlin(charge,nTS1,nTS2,1,0.);
@@ -93,7 +98,7 @@ void plot_SiPM_nonlin(){
   tl1->AddEntry(charge_org,"Raw Charge");
   tl1->AddEntry(charge_1,"Use function in DB, Q in each TS");
   tl1->AddEntry(charge_2,"Use function in DB, overall Q");
-  tl1->AddEntry(charge_3,"Paolo's procedure");
+  tl1->AddEntry(charge_3,"Paolo's 1st proposal");
   //tl1->AddEntry(charge_4,"Paolo's procedure but based on Q(TS)+0.4*Q(TS-1)");
   //tl1->AddEntry(charge_5,"Paolo's procedure but use the pol2");
   tl1->Draw();
@@ -126,10 +131,10 @@ void plot_SiPM_nonlin(){
   charge_5->Draw("same");  
 
   TLegend *tl2 = new TLegend(0.48,0.5,0.95,0.8);
-  tl2->AddEntry(charge_org,"Raw Charge");
+  //tl2->AddEntry(charge_org,"Raw Charge");
   //tl2->AddEntry(charge_1,"Use function in DB, Q in each TS");
   //tl2->AddEntry(charge_2,"Use function in DB, overall Q");
-  tl2->AddEntry(charge_3,"Paolo's procedure");
+  tl2->AddEntry(charge_3,"Paolo's 1st proposal");
   tl2->AddEntry(charge_4,"+ based on Q(TS)+0.4*Q(TS-1)");
   tl2->AddEntry(charge_5,"+ use the pol2 for each TS");
   tl2->Draw();
@@ -158,6 +163,13 @@ vector<double> func_nonlin(vector<double> charge,
 			   unsigned int nTS2, 
 			   unsigned int option, double fracPreviousTS=0.)
 {
+  // nTS1: 0-9 convention, determine the TS range used for corrections
+  // nTS2: last TS being included
+  // option: 
+  //  0: use existing function, apply TS-to-TS
+  //  1: use existing function, apply based on total fC
+  //  2: paolo's procedure, fracPreviousTS allows to use fracPreviousTS*Q(TS-1)+Q(TS)
+  //  3: use the pol2 for the TS-to-TS corrections
   
   vector<double> correctedCharge; // corrected charge which we want to return
 
@@ -170,10 +182,10 @@ vector<double> func_nonlin(vector<double> charge,
   TF1 *f1 = new TF1("func_nonlin",pol2,0,25000.,3); //this is the overall corr function based on integrated charge
   f1->SetParameters(1.,2.71238e-05,1.32877e-10);
   //f1->SetParNames("p1","p2");
-  // f1->Print();
-  // std::cout << f1->GetParameter(0) << std::endl;
-  // std::cout << f1->GetParameter(1) << std::endl;
-  // std::cout << f1->GetParameter(2) << std::endl;
+  //f1->Print();
+  //std::cout << f1->GetParameter(0) << std::endl;
+  //std::cout << f1->GetParameter(1) << std::endl;
+  //std::cout << f1->GetParameter(2) << std::endl;
 
   //
   // Check the numbers of pixels fired based on the input charge (total charge, charge in each TS etc etc)
@@ -239,7 +251,6 @@ vector<double> func_nonlin(vector<double> charge,
     return correctedCharge;    
   }
 
-
   //
   // Option 3
   //
@@ -270,8 +281,6 @@ vector<double> func_nonlin(vector<double> charge,
       else         npix = npixel[ibin];
       corr = 1. + a *(f2->Eval(npix)-1.); 
       correctedCharge.push_back( charge[ibin]*corr ); // or correcting only a certain ranges?
-      // std::cout << charge[ibin]*corr << " " << corr << " " << (corr-1)/npix << std::endl;
-      // std::cout << (f2->Eval(npix)-1.)/npix << std::endl;
       // f2->Print();
       // std::cout << f2->GetParameter(0) << std::endl;
       // std::cout << f2->GetParameter(1) << std::endl;
