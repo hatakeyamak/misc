@@ -1,0 +1,59 @@
+dependent_variables:
+- header: {name: signal yields}
+  qualifiers:
+    - {name: SQRT(S) = 13 TeV, value: .}
+    - {name: '', value: T2tt(1100,1)}
+  value:
+  - {value: 26.4}
+  - {value: 3.8}
+  - {value: 0.1}
+  - {value: 0.0}
+  - {value: 5.9}
+  - {value: 5.5}
+  - {value: 2.5}
+  - {value: 0.5}
+  - {value: 0.4}
+  - {value: 0.2}
+- header: {name: signal yields}
+  qualifiers:
+    - {name: SQRT(S) = 13 TeV, value: .}
+    - {name: '', value: T2tt(900,450)}
+  value:
+  - {value: 86.1}
+  - {value: 10.3}
+  - {value: 0.3}
+  - {value: 0.0}
+  - {value: 10.5}
+  - {value: 2.1}
+  - {value: 1.3}
+  - {value: 1.0}
+  - {value: 0.5}
+  - {value: 0.2}
+- header: {name: signal yields}
+  qualifiers:
+    - {name: SQRT(S) = 13 TeV, value: .}
+    - {name: '', value: T2tt(500,325)}
+  value:
+  - {value: 136.6}
+  - {value: 14.7}
+  - {value: 1.2}
+  - {value: 0.4}
+  - {value: 7.0}
+  - {value: 0.1}
+  - {value: 3.4}
+  - {value: 1.1}
+  - {value: 0.3}
+  - {value: 0.3}
+independent_variables:
+- header: {name: Search Bin}
+  value:
+  - {value: '1) Ntops=1, Nbjets=1, MT2=200+, pTmiss=250+'}
+  - {value: '2) Ntops=2, Nbjets=2, MT2=200+, pTmiss=250+'}
+  - {value: '3) Ntops=3, Nbjets=1, MT2=200+, pTmiss=250+'}
+  - {value: '4) Ntops=3, Nbjets=3, MT2=200+, pTmiss=250+'}
+  - {value: '5) Ntops=2, Nbjets=1, MT2=200+, pTmiss=400+'}
+  - {value: '6) Ntops=1, Nbjets=2, MT2=600+, pTmiss=400+'}
+  - {value: '7) Ntops=1, Nbjets=2, HT=1400+, pTmiss=500+'}
+  - {value: '8) Ntops=2, Nbjets=3, HT=600+, pTmiss=350+'}
+  - {value: '9) Ntops=2, Nbjets=3, HT=300+, pTmiss=500+'}
+  - {value: '10) Ntops=2, Nbjets=3, HT=1300+, pTmiss=500+'}

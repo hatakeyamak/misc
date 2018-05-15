@@ -1,0 +1,88 @@
+dependent_variables:
+- header: {name: number of events}
+  qualifiers:
+  - {name: SQRT(S) = 13 TeV, value: .}
+  - {name: '', value: Sum of Predicted Background}
+  values:
+  - errors:
+    - {label: stat, symerror: 50}
+    - asymerror: {minus: -340, plus: 390}
+      label: sys
+    value: 4100
+  - errors:
+    - {label: stat, symerror: 8}
+    - asymerror: {minus: -12, plus: 15}
+      label: sys
+    value: 116
+  - errors:
+    - asymerror: {minus: -1.1, plus: 2.0}
+      label: stat
+    - asymerror: {minus: -1.1, plus: 1.2}
+      label: sys
+    value: 3.3
+  - errors:
+    - asymerror: {minus: -0.4, plus: 1.4}
+      label: stat
+    - {label: sys, symerror: 0.5}
+    value: 0.5
+  - errors:
+    - asymerror: {minus: -3, plus: 4}
+      label: stat
+    - asymerror: {minus: -4, plus: 5}
+      label: sys
+    value: 30
+  - errors:
+    - asymerror: {minus: -1.2, plus: 2.1}
+      label: stat
+    - asymerror: {minus: -1.9, plus: 2.0}
+      label: sys
+    value: 7.5
+  - errors:
+   - asymerror: {minus: -1.5, plus: 2.7}
+      label: stat
+    - {label: sys, symerror: 1.5}
+    value: 6.0
+  - errors:
+   - asymerror: {minus: -1.2, plus: 2.1}
+      label: stat
+    - {label: sys, symerror: 0.9}
+    value: 3.9
+  - errors:
+   - asymerror: {minus: -0.4, plus: 1.0}
+      label: stat
+    - {label: sys, symerror: 0.4}
+    value: 0.6
+  - errors:
+   - asymerror: {minus: -0.3, plus: 1.8}
+      label: stat
+    - {label: sys, symerror: 0.2}
+    value: 0.2
+- header: {name: number of events}
+  qualifiers:
+  - {name: SQRT(S) = 13 TeV, value: .}
+  - {name: '', value: observed data}
+  values:
+  - {value: 4424}
+  - {value: 124}
+  - {value: 2}
+  - {value: 0}
+  - {value: 41}
+  - {value: 4}
+  - {value: 6}
+  - {value: 7}
+  - {value: 0}
+  - {value: 0}
+independent_variables:
+- header: {name: Search Bin}
+  values:
+  - {value: '1) TopTags = 1+, BTags=1+, MT2=200+, MET=250+'}
+  - {value: '2) TopTags = 2+, BTags=2+, MT2=200+, MET=250+'}
+  - {value: '3) TopTags = 3+, BTags=1+, MT2=200+, MET=250+'}
+  - {value: '4) TopTags = 3+, BTags=3+, MT2=200+, MET=250+'}
+  - {value: '5) TopTags = 2+, BTags=1+, MT2=200+, MET=400+'}
+  - {value: '6) TopTags = 1+, BTags=2+, MT2=600+, MET=400+'}
+  - {value: '7) TopTags = 1+, BTags=2+, HT=1400+, MET=500+'}
+  - {value: '8) TopTags = 2+, BTags=3+, HT=600+, MET=350+'}
+  - {value: '9) TopTags = 2+, BTags=3+, HT=300+, MET=500+'}
+  - {value: '10) TopTags = 2+, BTags=3+, HT=1300+, MET=500+'}
+

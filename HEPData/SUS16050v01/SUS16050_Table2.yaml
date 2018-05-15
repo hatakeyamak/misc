@@ -1,0 +1,168 @@
+dependent_variables:
+- header: {name: number of events}
+  qualifiers:
+    - {name: SQRT(S) = 13 TeV, value: .}
+    - {name: '', value: predicted background}
+  value:
+  - errors:
+    - {label: stat, symerror: 30}
+    - asymerror: {minus: -140, plus: 130}
+      label: sys
+    value: 1600
+  - errors:
+    - asymerror: {minus: -6, plus: 7}
+      label: stat
+    - asymerror: {minus: -9, plus: 12}
+      label: sys
+    value: 73
+  - errors:
+    - asymerror: {minus: -3, plus: 4}
+      label: stat
+    - asymerror: {minus: -4, plus: 6}
+      label: sys
+    value: 18
+  - errors:
+    - asymerror: {minus: -0.8, plus: 1.9}
+      label: stat
+    - asymerror: {minus: -0.8, plus: 1.9}
+      label: sys
+    value: 3.6
+  - errors:
+    - asymerror: {minus: -1.1, plus: 2.4}
+      label: stat
+    - asymerror: {minus: -1.2, plus: 1.9}
+      label: sys
+    value: 5.0
+  - errors:
+    - {label: stat, symerror: 20}
+    - asymerror: {minus: -80, plus: 80}
+      label: sys
+    value: 890
+  - errors:
+    - asymerror: {minus: -6, plus: 7}
+      label: stat
+    - {label: sys, symerror: 9}
+    value: 79
+  - errors:
+    - asymerror: {minus: -2, plus: 4}
+      label: stat
+    - {label: sys, symerror: 3}
+    value: 17
+  - errors:
+    - asymerror: {minus: -0.8, plus: 2.2}
+      label: stat
+    - asymerror: {minus: -0.9, plus: 1.6}
+      label: sys
+    value: 3.7
+  - errors:
+    - asymerror: {minus: -7, plus: 8}
+      label: stat
+    - {label: sys, symerror: 10}
+    value: 107
+  - errors:
+    - asymerror: {minus: -6, plus: 7}
+      label: stat
+    - {label: sys, symerror: 10}
+    value: 105
+  - errors:
+    - asymerror: {minus: -4, plus: 5}
+      label: stat
+    - {label: sys, symerror: 7}
+    value: 38
+  - errors:
+    - asymerror: {minus: -1.2, plus: 2.4}
+      label: stat
+    - {label: sys, symerror: 1.9}
+    value: 8.1
+  - errors:
+    - asymerror: {minus: -0.3, plus: 1.0}
+      label: stat
+    - asymerror: {minus: -0.2, plus: 0.4}
+      label: sys
+    value: 0.7
+  - errors:
+    - asymerror: {minus: -1.1, plus: 2.0}
+      label: stat
+    - {label: sys, symerror: 0.8}
+    value: 4.3
+  - errors:
+    - asymerror: {minus: -2, plus: 3}
+      label: stat
+    - {label: sys, symerror: 3}
+    value: 13
+  - errors:
+    - asymerror: {minus: -2, plus: 3}
+      label: stat
+    - {label: sys, symerror: 4}
+    value: 19
+  - errors:
+    - asymerror: {minus: -0.3, plus: 1.5}
+      label: stat
+    - {label: sys, symerror: 1.8}
+    value: 4.0
+  - errors:
+    - asymerror: {minus: -0.1, plus: 1.7}
+      label: stat
+    - {label: sys, symerror: 0.1}
+    value: 0.1
+  - errors:
+    - asymerror: {minus: -1, plus: 2.2}
+      label: stat
+    - asymerror: {minus: -0.8, plus: 0.9}
+      label: sys
+    value: 1.9
+  - errors:
+    - asymerror: {minus: -0.5, plus: 1.6}
+      label: stat
+    - {label: sys, symerror: 1.9}
+    value: 4.6
+- header: {name: number of events}
+  qualifiers:
+    - {name: SQRT(S) = 13 TeV, value: .}
+    - {name: '', value: observed data}
+  value:
+  - {value: 1649}
+  - {value: 85}
+  - {value: 23}
+  - {value: 7}
+  - {value: 7}
+  - {value: 1020}
+  - {value: 87}
+  - {value: 23}
+  - {value: 9}
+  - {value: 108}
+  - {value: 116}
+  - {value: 47}
+  - {value: 12}
+  - {value: 1}
+  - {value: 7}
+  - {value: 17}
+  - {value: 10}
+  - {value: 7}
+  - {value: 0}
+  - {value: 1}
+  - {value: 8}
+independent_variables:
+- header: {name: Search Bin}
+  value:
+  - {value: '1) Ntops=1, Nbjets=1, MT2=200--300, pTmiss=250--400'}
+  - {value: '2) Ntops=1, Nbjets=1, MT2=200--300, pTmiss=400--500'}
+  - {value: '3) Ntops=1, Nbjets=1, MT2=200--300, pTmiss=500--600'}
+  - {value: '4) Ntops=1, Nbjets=1, MT2=200--300, pTmiss=600--750'}
+  - {value: '5) Ntops=1, Nbjets=1, MT2=200--550, pTmiss=750-Inf'}
+  - {value: '6) Ntops=1, Nbjets=1, MT2=300--400, pTmiss=250--400'}
+  - {value: '7) Ntops=1, Nbjets=1, MT2=300--400, pTmiss=400--500'}
+  - {value: '8) Ntops=1, Nbjets=1, MT2=300--400, pTmiss=500--600'}
+  - {value: '9) Ntops=1, Nbjets=1, MT2=300--400, pTmiss=600--750'}
+  - {value: '10) Ntops=1, Nbjets=1, MT2=400--550, pTmiss=250--400'}
+  - {value: '11) Ntops=1, Nbjets=1, MT2=400--550, pTmiss=400--500'}
+  - {value: '12) Ntops=1, Nbjets=1, MT2=400--550, pTmiss=500--600'}
+  - {value: '13) Ntops=1, Nbjets=1, MT2=400--550, pTmiss=600--750'}
+  - {value: '14) Ntops=1, Nbjets=1, MT2=550--750, pTmiss=250--400'}
+  - {value: '15) Ntops=1, Nbjets=1, MT2=550--750, pTmiss=400--500'}
+  - {value: '16) Ntops=1, Nbjets=1, MT2=550--750, pTmiss=500--600'}
+  - {value: '17) Ntops=1, Nbjets=1, MT2=550--750, pTmiss=600--750'}
+  - {value: '18) Ntops=1, Nbjets=1, MT2=550--750, pTmiss=750-Inf'}
+  - {value: '19) Ntops=1, Nbjets=1, MT2=750-Inf, pTmiss=250--600'}
+  - {value: '20) Ntops=1, Nbjets=1, MT2=750-Inf, pTmiss=600--750'}
+  - {value: '21) Ntops=1, Nbjets=1, MT2=750-Inf, pTmiss=750-Inf'}
