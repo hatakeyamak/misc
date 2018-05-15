@@ -1,0 +1,85 @@
+independent_variables:
+- header: {name: '$m_{\tilde{t}}$', units: GeV}
+  values:
+  - value: 779.9
+  - value: 775.0
+  - value: 773.6
+  - value: 766.2
+  - value: 762.2
+  - value: 761.8
+  - value: 761.9
+  - value: 759.2
+  - value: 755.0
+  - value: 751.8
+  - value: 750.0
+  - value: 750.0
+  - value: 745.9
+  - value: 738.2
+  - value: 725.0
+  - value: 715.0
+  - value: 700.0
+  - value: 675.0
+  - value: 650.0
+  - value: 625.0
+  - value: 600.0
+  - value: 594.2
+  - value: 575.0
+  - value: 550.0
+  - value: 548.8
+  - value: 525.0
+  - value: 520.3
+  - value: 500.0
+  - value: 491.3
+  - value: 475.0
+  - value: 459.4
+  - value: 450.0
+  - value: 427.7
+  - value: 425.0
+  - value: 400.0
+  - value: 385.9
+  - value: 375.0
+  - value: 225.0
+
+
+dependent_variables:
+- header: {name: '$m_{\tilde{\chi}^0_1}$', units: GeV}
+  values:
+  - value: 25.0
+  - value: 44.0
+  - value: 50.0
+  - value: 75.0
+  - value: 100.0
+  - value: 125.0
+  - value: 150.0
+  - value: 175.0
+  - value: 200.0
+  - value: 225.0
+  - value: 249.7
+  - value: 250.0
+  - value: 275.0
+  - value: 300.0
+  - value: 317.5
+  - value: 325.0
+  - value: 330.6
+  - value: 337.5
+  - value: 340.8
+  - value: 336.8
+  - value: 327.8
+  - value: 325.0
+  - value: 314.8
+  - value: 300.9
+  - value: 300.0
+  - value: 278.6
+  - value: 275.0
+  - value: 256.3
+  - value: 250.0
+  - value: 235.3
+  - value: 225.0
+  - value: 216.7
+  - value: 200.0
+  - value: 197.6
+  - value: 179.9
+  - value: 175.0
+  - value: 171.0
+  - value: 2.4
+
