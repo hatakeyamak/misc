@@ -16,7 +16,7 @@ btagsf   	lnN		1.08	  1.08	    1.08      		1.08
 pdf   	 	lnN		-	  1.10	    -         		1.10
 isr_signal   	lnN		1.10	    -       1.10    		-
 scale_signal 	lnN		1.05	    -	    1.12      		-
-topXsecSF 	lnN		1.12	  1.12	    1.12      		1.12
+topXsecSF 	lnN			    1.12    -      		1.12
 -------------------------------------
 rateparam1      rateParam       SR_bveto		bkg   1
 rateparam1      rateParam       CR_bveto_0l_antiT     	bkg   1
