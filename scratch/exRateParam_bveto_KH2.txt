@@ -1,0 +1,23 @@
+imax * number of bins
+jmax * number of processes minus 1
+kmax * number of nuisance parameters
+-------------------------------------
+bin		SR_bveto                CR_bveto_0l_antiT
+observation     10			58
+-------------------------------------
+bin				SR_bveto  SR_bveto  CR_bveto_0l_antiT   CR_bveto_0l_antiT
+process 			sig       bkg 	    sig     	      	bkg
+process 			0         1         0		      	1
+rate    			4.0       10.0	    0.5		        58.0
+-------------------------------------	
+jes      	lnN		1.05	  1.05	    1.05		1.05
+jer      	lnN		1.03	  1.03	    1.03      		1.03
+btagsf   	lnN		1.08	  1.08	    1.08      		1.08
+pdf   	 	lnN		-	  1.10	    -         		1.10
+isr_signal   	lnN		1.10	    -       1.10    		-
+scale_signal 	lnN		1.05	    -	    1.12      		-
+topXsecSF 	lnN		1.12	  1.12	    1.12      		1.12
+-------------------------------------
+rateparam1      rateParam       SR_bveto		bkg   1
+rateparam1      rateParam       CR_bveto_0l_antiT     	bkg   1
+-------------------------------------
