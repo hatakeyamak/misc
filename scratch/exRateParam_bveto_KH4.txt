@@ -1,0 +1,29 @@
+imax * number of bins
+jmax * number of processes minus 3
+kmax * number of nuisance parameters
+-------------------------------------
+bin		SR_bveto                wT2M_bveto                wmdT2M_bveto             CR_bveto_0l_antiT
+observation     10			20			  58			   58
+-------------------------------------
+bin				SR_bveto  SR_bveto  SR_bveto  SR_bveto  wT2M_bveto  wT2M_bveto  wT2M_bveto  wT2M_bveto  wmdT2M_bveto  wmdT2M_bveto  wmdT2M_bveto  wmdT2M_bveto  CR_bveto_0l_antiT  CR_bveto_0l_antiT  CR_bveto_0l_antiT  CR_bveto_0l_antiT
+process 			sig       nonres oneres twores 	    sig       nonres oneres twores 	    sig       nonres oneres twores 	    sig	nonres oneres	twores
+process 			0         1      2      3           0         1      2      3           0         1      2      3           0	1      2	3
+rate    			4.0       10.0 	 1.5    0.5   	    4.0       20.0 	 3.0    1.0   	    8.0       40.0 	 6.0    2.0   	    0.5 52.0   5.0      1.0
+-------------------------------------	
+jes      	lnN		1.05	  1.05	    1.05		1.05 1.05	  1.05	    1.05		1.05 1.05	  1.05	    1.05		1.05 1.05	  1.05	    1.05		1.05
+jer      	lnN		1.03	  1.03	    1.03      		1.03 1.03	  1.03	    1.03      		1.03 1.03	  1.03	    1.03      		1.03 1.03	  1.03	    1.03      		1.03
+btagsf   	lnN		1.08	  1.08	    1.08      		1.08 1.08	  1.08	    1.08      		1.08 1.08	  1.08	    1.08      		1.08 1.08	  1.08	    1.08      		1.08
+pdf   	 	lnN		-	  1.10	    1.10         	1.10 -	  1.10	    1.10         		1.10 -	  1.10	    1.10         	1.10 -	  1.10	    1.10         		1.10
+isr_signal   	lnN		1.10	    -       -    		-    1.10	    -       -    		- 1.10	    -       -    		-    1.10	    -       -    		-
+scale_signal 	lnN		1.05	    -	    -      		-    1.05	    -	    -      		- 1.05	    -	    -      		-    1.05	    -	    -      		-
+topXsecSF 	lnN	        -         1.12      1.12      		1.12 -         1.12      1.12      		1.12 -         1.12      1.12      		1.12 -         1.12      1.12      		1.12
+-------------------------------------
+rateparam1      rateParam       SR_bveto		nonres   1
+rateparam1      rateParam       wT2M_bveto		nonres   1
+rateparam1      rateParam       wmdT2M_bveto		nonres   1
+rateparam1      rateParam       CR_bveto_0l_antiT     	nonres   1
+rateparam2      rateParam       SR_bveto		oneres   1
+rateparam2      rateParam       wT2M_bveto		oneres   1
+rateparam2      rateParam       wmdT2M_bveto		oneres   1
+#rateparam2      rateParam       CR_bveto_0l_antiT     	oneres   1
+-------------------------------------

@@ -1,0 +1,23 @@
+imax * number of bins
+jmax * number of processes minus 3
+kmax * number of nuisance parameters
+-------------------------------------
+bin		SR_bveto
+observation     10
+-------------------------------------
+bin				SR_bveto  SR_bveto  SR_bveto  SR_bveto
+process 			sig       nonres oneres twores
+process 			0         1      2      3
+rate    			4.0       10.0 	 1.5    0.5
+-------------------------------------	
+jes      	lnN		1.05	  1.05	    1.05		1.05
+jer      	lnN		1.03	  1.03	    1.03      		1.03
+btagsf   	lnN		1.08	  1.08	    1.08      		1.08
+pdf   	 	lnN		-	  1.10	    1.10         	1.10
+isr_signal   	lnN		1.10	    -       -    		-   
+scale_signal 	lnN		1.05	    -	    -      		-   
+topXsecSF 	lnN	        -         1.12      1.12      		1.12
+-------------------------------------
+rateparam1      rateParam       SR_bveto		nonres   1
+rateparam2      rateParam       SR_bveto		oneres   1
+-------------------------------------
