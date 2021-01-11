@@ -8,7 +8,7 @@ observation  18.33  57.2   58
 bin                             ch1     ch1     ch1     ch1     ch2     ch2     ch2     ch2     ch3     ch3     ch3     ch3   
 process                         sig     oneres  twores  nonres  sig     oneres  twores  nonres  sig     oneres  twores  nonres
 process                         0       1       2       3       0       1       2       3       0       1       2       3     
-rate                            14      2.34     0.5    15.6    8       7.2     2       48      0.5     5       1       52    
+rate                            14      1.5     0.5    10       8       6       2       40      0.5     5       1       52    
 ----------------------------------------------------------------------------------------------------------------------------------
 btagsf                  lnN     1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08  
 isr_signal              lnN     1.1     -       -       -       1.1     -       -       -       1.1     -       -       -     
