@@ -1,0 +1,55 @@
+imax 6 number of bins
+jmax 3 number of processes minus 1
+kmax * number of nuisance parameters
+# ch4 = w & wmd pass
+# ch5 = w only pass
+# ch6 = wmd only pass
+----------------------------------------------------------------------------------------------------------------------------------
+bin          SR     wmdT2M CR0T2M ch4   ch5  ch6
+observation  18.33  57.2   58     195   65   345
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             SR      SR      SR      wmdT2M  wmdT2M  wmdT2M  CR0T2M  CR0T2M  CR0T2M  ch4     ch4     ch5     ch5     ch6     ch6   
+process                         sig     twores  01res   sig     twores  01res   sig     twores  01res   sig     pred    sig     pred    sig     pred  
+process                         0       2       3       0       2       3       0       2       3       0       4       0       4       0       4     
+rate                            14      0.5     11.5    8       2       46      0.5     1       57      0.0     150     0.0     50      0.0     300    
+----------------------------------------------------------------------------------------------------------
+btagsf                  lnN     1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08    1.08  
+isr_signal              lnN     1.1     -       -       1.1     -       -       1.1     -       -       1.1     -       1.1     -       1.1     -     
+jer                     lnN     1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03    1.03  
+jes                     lnN     1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05    1.05  
+pdf                     lnN     -       1.1     -       -       1.1     -       -       1.1     -       1.1     -       1.1     -       1.1     -   
+scale_signal            lnN     1.05    -       -       1.05    -       -       1.05    -       -       1.05    -       1.05    -       1.05    -     
+scale_twores            lnN     -       1.05    -       -       1.05    -       -       1.05    -       -       -       -       -       -       -     
+#
+# Varying the fraction of top and VV xsec will affect pass/fail ratio 
+topXsecSF               lnN     -       -       1.12    -       -       1.12    -       -       1.12    -       -       -       -       -       -    
+VVXsecSF                lnN     -       -       1.12    -       -       1.12    -       -       1.12    -       -       -       -       -       -    
+#
+# MC stat uncertainties 
+# below should repeat for wmdT2M and CR0T2M
+Stat_SR_sig             lnN     0.10    -       -       -       -       -       -       -       -       -       -       -       -       -       -     
+Stat_SR_twores          lnN     -       0.10    -       -       -       -       -       -       -       -       -       -       -       -       -
+Stat_SR_01res           lnN    -        -       0.10    -       -       -       -       -       -       -       -       -       -       -       -
+# 
+1MCRStat                lnN     -       -       -       -       -       -       -       -       -       -       1.03    -       1.03    -       1.03     
+# 
+# Externally computed w tag correction vs MET: consider 50% of the correction as conservative uncertainty
+wCorrUnc                lnN     -       -       1.20    -       -       -       -       -       -       -       -       -      -        -       -
+# Externally computed wmd tag correction vs MET: consider 50% of the correction as conservative uncertainty
+wmdCorrUnc              lnN     -       -       1.10    -       -       1.10    -       -       -       -       -       -      -        -       -
+#
+# Setting up parameters
+#
+# (depend on MET bins)
+Pwwmd1M    param 150. 10. # Rate of ak8 jet being tagged by both W and WMD in 1M2J events 
+PwOnly1M   param  50. 5.  # Rate of ak8 jet being tagged by only W in 1M2J events,
+PwmdOnly1M param 300. 30. # Rate of ak8 jet being tagged by only WMD in 1M2J events,
+#
+# Setting up rate parameters
+#
+R_2T2M    rateParam SR     01res  @0*((@1*@4+@2*@5)/(@4+@5))*((@1*@4+@3*@6)/(@4+@6)) R_0T2M,R_wwmdCorr,R_wmdOnlyCorr,R_wOnlyCorr,Pwwmd1M,PwmdOnly1M,PwOnly1M,PwmdCorrNorm,PwCorrNorm
+R_wmdT2M  rateParam wmdT2M 01res  @0*((@1*@3+@2*@4)/(@3+@4))                         R_0T2M,R_wwmdCorr,R_wmdOnlyCorr,Pwwmd1M,PwmdOnly1M,PwCorrNorm
+R_0T2M          rateParam CR0T2M 01res  1 [0.01,5.]
+R_wwmdCorr      rateParam ch4 pred 1 [0.01,5.]
+R_wOnlyCorr     rateParam ch5 pred 1 [0.01,5.]
+R_wmdOnlyCorr   rateParam ch6 pred 1 [0.01,5.]
