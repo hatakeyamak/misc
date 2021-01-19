@@ -1,0 +1,38 @@
+# - - - - - - - - - - - - - - - - - - -
+imax * number of channels
+jmax *  number of backgrounds('*' = automatic)
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------------------------------------------------
+bin		SR2T2M_8	wmdT2M_8	CR0T2M_8
+observation	4.6244		22		15
+------------------------------------------------------
+bin		SR2T2M_8	SR2T2M_8	SR2T2M_8	SR2T2M_8	wmdT2M_8	wmdT2M_8	wmdT2M_8	wmdT2M_8	CR0T2M_8	CR0T2M_8	CR0T2M_8	CR0T2M_8
+process		sig		oneres		twores		nonres		sig		oneres		twores		nonres		sig		oneres		twores		nonres
+process		0		1		2		3		0		1		2		3		0		1		2		3
+rate		5.02874		0.370972		0.452615		3.22881		3.08976		1.33377		0.0634441		14.9944		0.537262		0.607415		0.139062		14.3127
+------------------------------------------------------
+# ------ Signal Stat Unc.
+stSig_2T2M_8  lnN		1.02785	-	-	-	-	-	-	-	-	-	-	-	
+stSig_wmdT2M_8  lnN		-	-	-	-	1.03881	-	-	-	-	-	-	-	
+stSig_0T2M_8  lnN		-	-	-	-	-	-	-	-	1.10205	-	-	-	
+# ------ Bkg Stat Unc.
+stOneRes_2T2M_8  lnN		-	1.59528	-	-	-	-	-	-	-	-	-	-	
+stOneRes_wmdT2M_8  lnN		-	-	-	-	-	1.42034	-	-	-	-	-	-	
+stOneRes_0T2M_8  lnN		-	-	-	-	-	-	-	-	-	1.56394	-	-	
+stTwoRes_2T2M_8  lnN		-	-	1.27975	-	-	-	-	-	-	-	-	-	
+stTwoRes_wmdT2M_8  lnN		-	-	-	-	-	-	1.6795	-	-	-	-	-	
+stTwoRes_0T2M_8  lnN		-	-	-	-	-	-	-	-	-	-	1.66477	-	
+stNonRes_2T2M_8  lnN		-	-	-	1.12611	-	-	-	-	-	-	-	-	
+stNonRes_wmdT2M_8  lnN		-	-	-	-	-	-	-	1.04668	-	-	-	-	
+stNonRes_0T2M_8  lnN		-	-	-	-	-	-	-	-	-	-	-	1.03811	
+# ------ Syst Unc.
+wCorrUnc  lnN			-	1.15804	-	1.15804	-	-	-	-	-	-	-	-
+wmdCorrUnc  lnN			-	0.992388	-	0.992388	-	0.992388	-	0.992388	-	-	-	-
+------------------------------------------------------
+# Setting up parameters
+R_2T2M_8			rateParam      SR2T2M_8	 nonres 	 @0*0.992388*1.15804		R_0T2M_8
+R_2T2M_8			rateParam      SR2T2M_8	 oneres 	 @0*0.992388*1.15804		R_0T2M_8
+R_wmdT2M_8			rateParam      wmdT2M_8	 nonres 	 @0*0.992388			R_0T2M_8
+R_wmdT2M_8			rateParam      wmdT2M_8	 oneres 	 @0*0.992388			R_0T2M_8
+R_0T2M_8			rateParam      CR0T2M_8	 nonres 	 1				[0.01,10.]
+R_0T2M_8			rateParam      CR0T2M_8	 oneres 	 1				[0.01,10.]
