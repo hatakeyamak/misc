@@ -136,6 +136,7 @@ void DataVsPredPostFit_KH(TString iFname, TString catName){
   h_sum->SetLineWidth(1);
   legend->AddEntry(h_sum,"Uncertainty","f");
 
+  /*
   f->GetObject("Signal",h_sig);
   h_sig->SetLineColor(kRed);
   h_sig->SetLineWidth(2);
@@ -144,7 +145,8 @@ void DataVsPredPostFit_KH(TString iFname, TString catName){
     legend->AddEntry(h_sig,"(-)Signal","l");
   }
   else legend->AddEntry(h_sig,"Signal","l");
-  
+  */
+
   c_cA->cd();    p_top->cd();
   hs_hist->SetMinimum(stackHistMinVal);
   hs_hist->SetMaximum(10*hs_hist->GetMaximum());
@@ -180,7 +182,7 @@ void DataVsPredPostFit_KH(TString iFname, TString catName){
   hs_hist->GetYaxis()->SetTitleSize(0.07);
   hs_hist->GetYaxis()->SetLabelSize(0.07);
 
-  h_sig->Draw("hist same");
+  //KH h_sig->Draw("hist same");
   
   c_cA->Modified();
   c_cA->Update();
