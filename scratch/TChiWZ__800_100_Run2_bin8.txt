@@ -30,6 +30,7 @@ wCorrUnc  lnN			-	1.15804	-	1.15804	-	-	-	-	-	-	-	-
 wmdCorrUnc  lnN			-	0.992388	-	0.992388	-	0.992388	-	0.992388	-	-	-	-
 ------------------------------------------------------
 # Setting up parameters
+# two control regions and signal region are linked, with corrections from the "1M" regions taken into account.
 R_2T2M_8			rateParam      SR2T2M_8	 nonres 	 @0*0.992388*1.15804		R_0T2M_8
 R_2T2M_8			rateParam      SR2T2M_8	 oneres 	 @0*0.992388*1.15804		R_0T2M_8
 R_wmdT2M_8			rateParam      wmdT2M_8	 nonres 	 @0*0.992388			R_0T2M_8
