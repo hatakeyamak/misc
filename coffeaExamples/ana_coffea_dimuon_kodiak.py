@@ -202,7 +202,7 @@ print(hists)
 print(hists["mass"])
 
 # (assert only valid when using maxchunks=4)
-#assert hists["sumw"]["DoubleMuon"] == 400224
+assert hists["sumw"]["DoubleMuon"] == 400224
 
 ###### Now actually display the histogram we created
 
