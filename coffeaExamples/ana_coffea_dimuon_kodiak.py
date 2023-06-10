@@ -189,7 +189,8 @@ with workers:
         executor=executor,
         schema=NanoAODSchema,
         chunksize=100000,
-        maxchunks=None,  # change this to None for a large run
+        maxchunks=4,  # change this to None for a large run
+        #maxchunks=None,  # change this to None for a large run
     )
     # execute the analysis on the given dataset
     hists = run_fn(fileset, "Events", MyProcessor())
